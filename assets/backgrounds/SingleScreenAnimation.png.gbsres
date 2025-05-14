@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "6234e20a-c02a-446c-959d-97fbadcfb463",
+  "name": "SingleScreenAnimation",
+  "symbol": "bg_singlescreenanimation",
+  "tileColors": "",
+  "filename": "SingleScreenAnimation.png",
+  "width": 40,
+  "height": 18,
+  "imageWidth": 320,
+  "imageHeight": 144
+}
