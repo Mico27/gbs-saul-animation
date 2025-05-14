@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "319c1f0e-614e-41b0-9b5a-571b92ae0e16",
+  "name": "SaulDMG/008",
+  "symbol": "tileset_sauldmg_008",
+  "width": 15,
+  "height": 10,
+  "imageWidth": 126,
+  "imageHeight": 80,
+  "filename": "SaulDMG/008.png"
+}

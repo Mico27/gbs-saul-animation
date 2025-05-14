@@ -1,0 +1,2466 @@
+{
+  "_resourceType": "scene",
+  "id": "27ef2292-fab1-4158-99a9-9229cef25729",
+  "_index": 0,
+  "name": "Color Only",
+  "backgroundId": "6234e20a-c02a-446c-959d-97fbadcfb463",
+  "tilesetId": "c7cc9958-6cf2-4aad-97fd-8174ce9c0a16",
+  "width": 40,
+  "height": 18,
+  "type": "TOPDOWN",
+  "colorModeOverride": "none",
+  "paletteIds": [
+    "dmg"
+  ],
+  "spritePaletteIds": [],
+  "collisions": "",
+  "autoFadeSpeed": null,
+  "symbol": "scene_1",
+  "x": 160,
+  "y": 120,
+  "script": [
+    {
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 0
+        },
+        "y": {
+          "type": "number",
+          "value": 0
+        },
+        "__collapse": true
+      },
+      "id": "80330f4d-a93c-48ec-ad73-50806c23a93a"
+    },
+    {
+      "command": "EVENT_OVERLAY_MOVE_TO",
+      "args": {
+        "x": 0,
+        "y": 18,
+        "speed": 0,
+        "__collapse": true
+      },
+      "id": "8d6e45b0-c9cd-470c-a287-fc2531e6e856"
+    },
+    {
+      "command": "EVENT_COPY_BKG_SUBMAP_TO_WIN",
+      "args": {
+        "sceneId": "27ef2292-fab1-4158-99a9-9229cef25729",
+        "bkg_x": {
+          "type": "number",
+          "value": 20
+        },
+        "bkg_y": {
+          "type": "number",
+          "value": 0
+        },
+        "win_x": {
+          "type": "number",
+          "value": 0
+        },
+        "win_y": {
+          "type": "number",
+          "value": 0
+        },
+        "w": {
+          "type": "number",
+          "value": 20
+        },
+        "h": {
+          "type": "number",
+          "value": 18
+        },
+        "__collapse": true
+      },
+      "id": "87e75a83-9005-4751-81d1-1bfc58d629ca"
+    },
+    {
+      "command": "EVENT_REPLACE_TILESET_TILES",
+      "args": {
+        "tilesetId": "152b6696-6fa1-4f7d-8644-ea4bef164d0c",
+        "idx_target_tile": {
+          "type": "number",
+          "value": 0
+        },
+        "idx_start_tile": {
+          "type": "number",
+          "value": 0
+        },
+        "tile_length": 252,
+        "__collapse": true
+      },
+      "id": "13a79795-677d-498c-b286-a0e0447a5e66"
+    },
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": "VM_SET_CONST_UINT8 _show_actors_on_overlay, 1",
+        "__collapse": true
+      },
+      "id": "f9d1cc75-5747-4773-bf32-1110fc94a181"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$",
+        "__collapse": true
+      },
+      "id": "9d1f2b63-9c95-4a6b-80e2-4075604fb6cd"
+    },
+    {
+      "command": "EVENT_FADE_IN",
+      "args": {
+        "speed": "2",
+        "__collapse": true
+      },
+      "id": "b1cf532a-f669-4f48-9133-220efb14b945"
+    },
+    {
+      "command": "EVENT_SCRIPT_UNLOCK",
+      "args": {
+        "__collapse": true
+      },
+      "id": "2b7b54ea-c8da-4da8-adc2-2e3826d5348f"
+    },
+    {
+      "command": "EVENT_MUSIC_PLAY",
+      "args": {
+        "musicId": "a733aec2-3de5-48ed-a942-a4de2b3d9d44",
+        "__collapse": true
+      },
+      "id": "36fa6a6a-1756-478d-b1dc-190bc318b888"
+    },
+    {
+      "command": "EVENT_LOOP",
+      "args": {
+        "variable": "L0",
+        "from": {
+          "type": "number",
+          "value": 0
+        },
+        "comparison": "<=",
+        "to": {
+          "type": "number",
+          "value": 4
+        },
+        "operation": "+=",
+        "value": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapse": false,
+        "__comment": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "ad537688-b0c0-44c1-97c8-81140ee994f5"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "e8a15607-15f3-4a7f-ab61-78c3e13dcf60",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": false
+                  },
+                  "id": "6f08eee5-c22a-4bb6-831a-1564cbcfbaba"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "a5137987-98e3-43a3-a62b-da1a08a0bc5d"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "4f4ee47a-0bbb-471a-bafe-d147e778f8c5"
+                }
+              ]
+            },
+            "id": "87ddd789-dcee-49af-ae4d-6773426a810c"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "0cf57b1a-5719-4d69-af8d-62ae1e8b90f3"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "3dde1cf2-6ec4-4e48-9269-1eb470aa59a1",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": false
+                  },
+                  "id": "e413f097-e617-4fa1-a641-b87de3749d5d"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "d300c8bf-76fd-42bd-8e7d-f80d37210d54"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "e789ea5f-4875-4915-8811-d0bf04efb466"
+                }
+              ]
+            },
+            "id": "838fa6d2-35bf-41ae-8577-dd516d3946c3"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "044b5802-5e22-4790-b995-a8bb15a44764"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "da2ff803-e529-4ff0-81cd-92edd4a183f3",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "5e4daa88-6f53-4ec2-82b8-076445c62fb0"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "4f9ea256-3688-4689-ac16-2f276b971836"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "9280c952-2613-41a5-bb13-51d75f049353"
+                }
+              ]
+            },
+            "id": "c851071e-e3c6-44a3-913d-6ff7a59c8bad"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "8fd885b9-4cea-4293-aacd-167108b20f51"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "73fe92ac-0715-4422-86ac-fabe00434484",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "9f4f7c58-f52b-4b80-9a87-6c88bfb33fe9"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "a273f2fd-05c5-4351-b0e4-6559cebd1fca"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "30872c05-812c-43dc-a3a6-c87910376d0d"
+                }
+              ]
+            },
+            "id": "0796d5d7-9f52-488f-81a6-1212b25d0453"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "dceaf3b2-a267-4e8f-bcf0-40f67434000f"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "0e95314c-daaa-4d65-a81a-18c3a100fb8f",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "6f8aeb71-018a-487c-b732-2e6900f600ec"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "6dc1af50-55e7-413b-b584-30bf7517caa0"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "005ebb12-6db9-4f66-aaff-13c67b9396c9"
+                }
+              ]
+            },
+            "id": "e5a83482-5bae-4588-989f-983b2d8b3c13"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "d0691802-d82b-4a81-b9e0-68abecf6905e"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "bf4fdb2e-b154-4c87-aa3f-6a4530171e72",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "0b318105-1147-4227-8e6a-97bc6ab3ed93"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "6afb4568-6032-4675-9b65-75d173493210"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "35654cf1-d781-485e-bcb6-2148308e63f2"
+                }
+              ]
+            },
+            "id": "20bab4e0-5ae0-4dd9-be85-f766191ca579"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "a87345ac-572e-451f-9724-5d6caed92293"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "1de9b18a-fb05-4675-8bbc-80af1af9d222",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "f939ae2b-fcae-4dd0-943d-afa410363ff3"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "b3426e8c-57d1-4f2b-9409-de5dbbbf93ba"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "8fd932d5-ee6d-4c08-a710-fe59581722fc"
+                }
+              ]
+            },
+            "id": "b72ac172-cd05-4c4a-b137-cb1904fec832"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "75c22872-34df-4254-8c51-49f0029afa38"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "dafdf226-5951-4d67-b4dd-e337b53d9317",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "a1ad0a21-2c87-4edb-aae7-1247ca833f0b"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "ab37106d-6f9a-4c18-9031-a13533be8596"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "46b497b6-30d8-4c68-b2f1-0e69445e93de"
+                }
+              ]
+            },
+            "id": "c426ed60-5359-4795-8be0-1a8eb1c5d02e"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "f9505a03-0f57-46f4-91ec-f1c9070c708d"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "2828ece5-e1f1-4a35-afe6-06ae2793e868",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "ff570acc-dc90-4bd3-9d8e-e329a9341dcb"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "2cf5682f-cf4b-4f5e-a856-105053de8592"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "cc00257a-1005-41c7-ac4c-4b41ed3ddc81"
+                }
+              ]
+            },
+            "id": "36439c08-0f96-4a5e-92f6-b95550537048"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "35fc8419-fd0d-49a7-a1e1-7095d20c4ccc"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "5c41abe8-cda0-4c64-8b23-47963d9a4f8f",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "ee9f3d0c-1d10-427a-94df-2b85e908a1ed"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "26c8514c-3751-451d-9bf8-2f0c0099da6e"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "0329e7df-cf4c-454d-baab-d91a6adb27ca"
+                }
+              ]
+            },
+            "id": "c8b3c0ce-4c6d-4319-9059-09c8702eaf12"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "e2fba6d8-6789-4158-834a-c4c05647ced2"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "7199687a-d97d-4a2b-84bf-680d12c0ca92",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "e8b65404-381f-41d4-a782-b19dbe60672a"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "c1eeb4e3-f1a2-4b9c-a98a-58448fe65a57"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "b8b167bc-b6cc-4de6-82e3-9bcd166f4882"
+                }
+              ]
+            },
+            "id": "ef04adb2-a64e-4b4d-9786-2c5638a506d8"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "c74b03cc-b867-470f-ba8b-90488b848798"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "cb433b7f-f91e-4f01-8523-9647405ccdb2",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "656aa8b7-4976-4817-9c6a-b3b8e4582a72"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "6e9abd6f-2784-479b-91d6-c69aed4e94ea"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "33dda46e-0d5d-4aad-af54-b6024dabd059"
+                }
+              ]
+            },
+            "id": "91d5514d-8d62-4272-bb38-6471909fe05b"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "2bf0373d-0d63-4c21-906e-ab0b81913a1e"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "4c21d2b3-b8eb-4656-94e0-9dfdf1c8cb44",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "40579e22-0a81-4072-9814-ba5ef01e7135"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "87f26110-b573-497e-9225-abd35a8362a4"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "fada953c-cd2d-4211-88a1-a71d8b6730bb"
+                }
+              ]
+            },
+            "id": "8b3cf775-65f2-41b5-9724-665ec32e1182"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "478246c3-9f5a-4f4e-926f-a39ad003fdef"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "5f443de9-c28a-412a-bfa0-98f96745acf2",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "e0543acd-f0c1-44ad-bfc8-3b13e58ddec8"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "0dee0f74-eb7b-4daf-bb30-fb876043ef8a"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "4b2161e0-5e94-4b7d-8e54-99374b8d1889"
+                }
+              ]
+            },
+            "id": "8cd5e74c-edaa-44e6-b094-88fb7f5a1439"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "a8f3449c-3320-4722-affe-ca373dd6d57b"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "c5e7db0f-c7be-4d93-b20a-0abbf8003fbb",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "faa41f56-abe8-46d0-85f4-b314cc4f1852"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "ac533643-2894-4de3-a0c2-9701778e7165"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "bb2be234-8930-4e43-819f-129ba1605363"
+                }
+              ]
+            },
+            "id": "cf0cf6ab-87b5-4056-89ce-bdc22580d75a"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "1291380f-1f5c-44f0-a44b-ebf9678ed9bd"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "93a62af8-59fa-4682-960b-a91da02fc26c",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "2392acf3-85d6-4d7a-ad0d-dd50ec60ae64"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "c089cf81-187d-4b09-a8d4-6562c817c509"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "05760233-8206-4d2c-b4cf-1fbaa4f7e859"
+                }
+              ]
+            },
+            "id": "8ce166a4-33f4-43e7-9c84-7b3e961ac92b"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "0fb8d6cc-6324-4eb5-bfda-e634a942e011"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "05b2e52c-1a35-4c80-baad-e8fb50c4081e",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "ded021ff-1dda-4769-ac34-505b90ea444f"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "bda6b406-35d1-49fa-a851-8e6ee05bbf6d"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "a28bd13e-cb35-448e-9076-e3c2d90ea64f"
+                }
+              ]
+            },
+            "id": "74df6ecb-7199-42f7-b5ea-9b1c881e436b"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "8521500c-e5d7-4792-824c-c9c9e6391882"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "784fdc1e-0be1-4951-af27-a19905b6c753",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "c5b7c644-ca5e-4912-aa0a-376286c6d219"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "72498bf1-771d-4488-95eb-e906aed3f8a1"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "1b3bd776-3a8d-4981-9d51-32a542875aba"
+                }
+              ]
+            },
+            "id": "a95ac8e1-617d-4a0c-9125-61eddef9698b"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "cb575a2c-9fe5-4768-950a-617c3ddf11a8"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "5a5395d3-2b4e-4137-9643-3cf96b316e8d",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "06562949-83cc-4569-bca2-462feef770ef"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "b9254c1b-904f-4320-8248-3e04fb4c599a"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "9e279f94-d4a7-4513-b08c-57e6b42d0d54"
+                }
+              ]
+            },
+            "id": "53328d70-d85b-41dd-a69e-f6e416283e16"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "e0ebb53a-0290-4255-8e04-eb092b7e912f"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "c3966048-0476-4fc9-b242-9565f883e361",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "882d45a6-8ef6-48bf-aa39-7f886d988316"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "3ff363dc-e26c-4940-97f0-1a3bac1ccc5a"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "8df6702c-4429-4b7d-b4de-a4c5cc47157d"
+                }
+              ]
+            },
+            "id": "e8b0b8f3-1972-408c-8273-ec5f788dd587"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "7a184a56-bd86-4570-b901-a479a993b82e"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "1bbdc1e8-86ec-44fa-8772-633e6028d539",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "ec8721bb-a1cd-4697-84e1-b414f38d730c"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "53b406aa-94eb-49ca-a4ec-30c8062febed"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "1a6f6bcd-0903-4440-b4be-5ce302a70f6b"
+                }
+              ]
+            },
+            "id": "50bed55c-ceba-4cf3-acfe-990fe34c412e"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "f19859b1-c475-4f45-9467-bc09f2acc451"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "ed4b048e-85c5-498f-96f0-3f66a1435726",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "14bdfce9-e9a8-4c3d-a369-d2661fcf148b"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "7ce34219-b0a8-42c6-8297-859c2494cc20"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "dd3018b4-d646-4dd9-af04-714abb0847b7"
+                }
+              ]
+            },
+            "id": "e4423111-066f-4c72-995d-fb6daadf3b20"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "fbf79d65-f791-4e5f-80de-948aa015399a"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "a4d82b23-9fa3-4c04-a45f-0ac76bcd82fa",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "5a1fbebe-2366-4a6d-bcbc-f64fa9c6151c"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "4850414e-f8c1-4e42-95f4-059b3181e291"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "73fef78f-aed6-498c-a09c-c4b65d614842"
+                }
+              ]
+            },
+            "id": "ee745e15-a473-4582-8ba8-8d214b5daa24"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "02e5bbc4-4dae-4879-a46b-6184673f43d1"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "dc0ec5bb-47bf-4fba-8459-77ca0432f1ce",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "64f54c2b-3d12-4f82-9abe-aecc36b70c17"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "24cfc137-7fd1-4726-a26e-e54986409f65"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "4b0145f9-73b1-4dd1-9a73-c6df14e1598f"
+                }
+              ]
+            },
+            "id": "000167d9-45e8-40d9-8fee-2a008a4c4f7a"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "eb8f0b20-1fda-46e0-9a2d-d42f7313e3f2"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "5bd0dcd8-a83b-4441-b9ec-7a4d270039a4",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "3ca5c992-d1d2-4c65-b624-996896c953da"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "3d6e235d-df73-4b38-8ceb-95dda5fd34c6"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "6f44a663-5431-4fea-a728-4047c9e94a2f"
+                }
+              ]
+            },
+            "id": "4336f89e-9516-44fb-908d-e656c46f015d"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "1da4f8d5-66e2-477d-bd89-874d9c114609"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "f37bd755-8d51-4ae7-99b3-d447c5940fa7",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "bd46ac0f-fcb5-4b40-9979-ff58eeac9bcd"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "176709ae-32cb-4a4b-9573-2cfc1e67799e"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "fa2f613a-20dd-4f72-9709-6e333e0790ca"
+                }
+              ]
+            },
+            "id": "0da79820-037e-4b3e-a3f1-f0e727127d0e"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "d24ab6f5-f27b-4b81-a468-e7b1f3bdc103"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "35ee1153-9db4-4b4d-9e6c-abb106ae391d",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "7abfa634-54d8-4888-b1fb-e6dd94acdd71"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "edc2a3b5-e5ea-422a-8844-b4a83a3f6e59"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "e2564585-f2bd-4490-b54e-885e7de991b1"
+                }
+              ]
+            },
+            "id": "becbdf86-afc7-4975-9cf8-071c646b474b"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "30f968c9-a5d8-49f6-a28b-9237c59cb594"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "f9571ff2-c99c-4ca2-b107-9224fa525617",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "e613be51-1f88-4f4f-afb7-e5d2aad89ba7"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "9deace14-0f54-41c5-90ef-9fc0cdc2600f"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "0255aed1-b5ad-48b7-b666-fd114324c233"
+                }
+              ]
+            },
+            "id": "e95b7619-2859-4063-a7be-017e6b5baaf9"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "bcb64b98-0625-4ed1-8753-9c3803c4367d"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "2313d6d3-aafe-4ac3-8e3e-31fea937dd10",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "441591f9-7f95-4df8-ad59-d847db1b193e"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "d80f0c70-00b1-4a74-89fb-ad0f58c7e4be"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "b60463af-9fb1-4119-b96b-60e992ddf87f"
+                }
+              ]
+            },
+            "id": "c531db2c-985f-4a68-a21c-5df5301de825"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "2528d7ee-f09b-436d-a6f9-08127d5da847"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "492d7c95-869c-4ec1-8f93-0c90282b4101",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "0b0dd588-2a26-4c41-a082-bf05bee092c1"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "1c0cb35c-2477-4250-af23-05a006ad5631"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "da61a537-0791-402e-a209-48700c6df51b"
+                }
+              ]
+            },
+            "id": "2c31897d-134f-43f4-b2a9-636235d47138"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "ab179176-e1b0-4603-8a61-421dfcbbc389"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "5e1f83a1-9b5e-4f17-b0c9-e40fa679bb57",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "b4885db3-dd95-4abc-ad05-58c4ab31fe2c"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "f943c75c-6325-41d3-a175-e76bc99471d0"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "66d3e0b2-2f56-4440-bf07-8caf040a3ddf"
+                }
+              ]
+            },
+            "id": "f476e989-96ae-4082-8a3d-2c993bd5a543"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "b624bc26-7be6-47cd-9fcf-1aa9bedd26bb"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "0bd758ff-2308-4157-9621-f2fb257f1d16",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "712ba382-ae18-4f2b-aa65-674a9d8993ea"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "15cd277f-4d66-4140-9a76-532914b8e79c"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "0042511e-1da4-4fd6-bc1a-414bfb5d003c"
+                }
+              ]
+            },
+            "id": "dc0fbcf8-d47b-454f-a977-198dbc23fb63"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "8dcf4a3d-0475-4bfe-b0ce-bc429e2d9ef8"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "ec99f5cb-9f12-4100-a9e9-1c9495f73389",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "9eb5b1a1-9398-428e-a036-71d559395e6e"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "d65ab8a0-4646-4425-83c5-6e1facd723af"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "8d08ef08-dba9-4930-963f-33eba4896b60"
+                }
+              ]
+            },
+            "id": "2e9f90b7-d05a-45e3-b627-3526acb3e72a"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "6d107640-10b2-4554-a23f-2e44a8bb0a0b"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "e6ad57fe-3a84-40ec-b15d-eb01bd5da059",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "c48ea805-cad9-4a9e-8487-950efaff3294"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "a4be639f-627f-4ea4-9947-12fab807752e"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "d54d0676-d013-45fa-bf8f-6eb0bd6ad4a1"
+                }
+              ]
+            },
+            "id": "d25826cb-2d55-45ac-be45-f81c0a887c1f"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "603b2c31-207d-432d-b64d-2cd73984b5ec"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "5db65e8e-10e2-42c6-bf94-d626871ca830",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "331f0c98-919d-4153-8168-ed6fbaaeea0a"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "c8aecc8d-060d-470f-9280-9e0e54b780ef"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "9339b06a-1b54-470f-b729-9b8c89cd9bb3"
+                }
+              ]
+            },
+            "id": "a31839a1-6fd9-4005-890b-86838eb01ba8"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "9dda5ec4-abe1-4472-bee9-293f85b73624"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "b1f9921e-8419-436c-975e-da977b04b7ba",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": false
+                  },
+                  "id": "045bd7ab-cfd2-4427-a76a-3e1870c52648"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "dbeaa7af-9bd8-4bc5-82de-7cc581994b83"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "8acc424f-1d95-483c-8a3c-8293596f7c32"
+                }
+              ]
+            },
+            "id": "61e7b21f-1412-4924-aa49-45064ee9179b"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "f758c1e3-bfbe-4370-9e51-e1c9ca9b3f6b"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "a8ac0cf5-3daf-4dbe-80a1-f9321840c45c",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": false
+                  },
+                  "id": "3571c9af-66be-461c-b16d-c23c3efcd919"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "09647e71-16a6-436c-a4ef-27907d22fa0c"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "cbe9d0be-a5fc-4796-87ff-6cda0249c378"
+                }
+              ]
+            },
+            "id": "1a8d155e-f731-4aaf-9d9f-27bdac290299"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "422b6633-9fa7-408b-96a7-ded281539154"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "50204cf5-7dcd-489c-910f-791cfbc73104",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": false
+                  },
+                  "id": "3b3cee47-6a0e-459c-b53f-2e81e3fbf794"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "9f603e64-aaf1-42f1-a6a8-652acbbd09b5"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "fd54ef3d-927d-47cf-a29c-58ee792f8772"
+                }
+              ]
+            },
+            "id": "e08f24fe-a60e-40fd-bc08-705c1499fb35"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "964fdef3-66a6-4b87-9a3c-ccbc2309782a"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "c4d47288-0846-4e96-a5bb-0a2e40e94e69",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": false
+                  },
+                  "id": "245fd556-f306-4db3-8783-4e87332f217b"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "843f64a9-5885-4bbe-982b-90aed01775d6"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "b8eecf14-3bf7-410c-81b7-206639600fb2"
+                }
+              ]
+            },
+            "id": "73772101-fcbd-482f-b579-1397495795ef"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "600dcfc8-2129-4858-8f65-01e9cdd11548"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "cdaf3d1b-06f7-446b-9812-97b57768fdb4",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": false
+                  },
+                  "id": "f67ec483-dd3b-4f29-8462-7f51e606305a"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "07955852-3760-462d-8289-2d18168f452b"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "76ecbcec-ba88-4169-b5ed-ad29ef7f94b9"
+                }
+              ]
+            },
+            "id": "37c7c8c4-191e-4c75-8e07-0a9701ab359a"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "d2e91772-ce8e-4ef1-99e3-9d483f53bf28"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "91794c4a-819a-4a2d-86fe-f41647a965ac",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": false
+                  },
+                  "id": "806275bc-b450-48d7-9fff-a184f4e0ca24"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "930873e4-b357-4217-b151-bd5d6dcb4c69"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "eeb5cc0c-ffa2-43b6-a0ba-6b1e3b9e2f57"
+                }
+              ]
+            },
+            "id": "b4374b28-f695-4e3a-89e6-d5aa60f0cd7b"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "ba6ca59c-b32e-42ed-b6a7-3a800df095cf"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "415ec777-308a-4a9b-9473-7f7837ccc958",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": false
+                  },
+                  "id": "bcdc088c-bf13-44d6-b5f6-adf014a5ea24"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "d6220461-cac2-44e1-8cb3-3e61ce909eb3"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "bc08415c-f114-4f6b-8f2d-8c03a5f0442e"
+                }
+              ]
+            },
+            "id": "0dc28f05-fe62-4525-ae06-58d75589718d"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "a85dc347-331f-4370-9aa2-c732d3aca3db"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "7d1fc175-7425-41c6-b3b2-2fc05da699d3",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": false
+                  },
+                  "id": "09b753f0-1441-4f36-9825-da9585457871"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "c0bbaeca-7a9c-45c2-a4c1-0b5e0c2387a5"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "90c56ad6-f29e-41cb-b826-b6985fe33789"
+                }
+              ]
+            },
+            "id": "bacfac22-9033-476c-881f-fcab069ae167"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "9b158470-c96c-4404-9995-61abc1baa635"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "13d9a5ab-ccc5-46db-a5e3-f5f1fb19a7bd",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": false
+                  },
+                  "id": "95011eac-5fc4-465b-8905-fbb03c285127"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "4c647f92-848a-47f3-9be2-0dafd3b18349"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "f5977c00-c586-4383-9ac8-422419b864c5"
+                }
+              ]
+            },
+            "id": "6d39cc4c-be3b-4cfb-82c8-e7e88bffb6ea"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "980873e8-a97b-4e6e-aa73-364f7a29083b"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "fbff2988-34e3-41bd-af0d-6b857b38fb13",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": false
+                  },
+                  "id": "89d7ac57-7414-4ef4-9d20-733e0110a6bf"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "ed0e95c8-072c-4ed9-8810-15eaaf8173d2"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "543f028e-9fe6-4d68-8a77-d2e3496a8a6e"
+                }
+              ]
+            },
+            "id": "ff2282fb-2611-458c-a75e-3bfc2b7895b5"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "48688acb-0e2b-4564-8997-907753de6922"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "e22ca4ba-66de-4ead-891f-123c70bc6f4b",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": false
+                  },
+                  "id": "1885bbe1-6a5c-49f9-b25e-cc7c06553992"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "f3f9c641-fd7f-4179-90b8-f45f2a28ffa9"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "7698e7ff-4c47-4a53-85af-7c7b298725b2"
+                }
+              ]
+            },
+            "id": "2fe11287-d5f7-469c-9977-e439792814b4"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "957405f1-76d7-445a-a43d-fa54d97a379c"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "7b1e79a9-f64f-445f-8f4f-10801ec4c82f",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": false
+                  },
+                  "id": "bc426d51-5630-46d6-b68e-06986a611011"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "acc5970c-091d-4bb8-8c65-a199abca9d76"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "53f5b23b-2e06-4cf1-b058-6991416f4da5"
+                }
+              ]
+            },
+            "id": "2615e0e5-ba9e-47cd-9323-b5a2346abfa3"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "4383c213-36b0-4e8e-92fc-a8fa91156e14"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "36300029-1fbd-4f8d-b925-ec83207c920f",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": false
+                  },
+                  "id": "d531757c-b7a9-40b6-a0ac-6df6cdb7837d"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "0b7e6ef4-f195-40fa-a5f0-69e25a8234d1"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "27cb3977-3fc6-432f-9475-4c4882b0d6eb"
+                }
+              ]
+            },
+            "id": "784098fc-1501-4121-9897-a7a4c01e96cb"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameOverlay - Frame 1",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "a189b513-d151-488e-8516-558cf37ad59c"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "156f2b21-d0d2-46d5-86d7-a5aa5d729120",
+                    "idx_target_tile": 2048,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "1d120d7b-2a74-4df2-ac8b-1b1a76d98e0d"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "602aba94-bb06-46c9-9811-8299e452e838"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 0",
+                    "__collapse": true
+                  },
+                  "id": "c42608f0-8425-496f-883e-fe01eada760c"
+                }
+              ]
+            },
+            "id": "7f8db0d3-f69c-4b1d-8b89-d9819ec7332f"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__collapse": true,
+              "__label": "DrawFrameBackground - Frame 2",
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "12961c16-9b24-435e-bb7f-60902d6ae4a2"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILESET_TILES_CONST",
+                  "args": {
+                    "tilesetId": "1146d920-d324-4b8d-ade6-95d1ded3f830",
+                    "idx_target_tile": 0,
+                    "idx_start_tile": 0,
+                    "tile_length": 252,
+                    "__collapse": true
+                  },
+                  "id": "cdb50bdb-e6c1-4869-87be-17c8fa60321e"
+                },
+                {
+                  "command": "EVENT_IDLE",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "78358ad7-a3b5-4962-8d9e-dd1b4a2e764e"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SETPOS 0, 18",
+                    "__collapse": true
+                  },
+                  "id": "56d94977-3c49-44a3-867b-5c25d24ce250"
+                }
+              ]
+            },
+            "id": "c5072ed6-289f-4727-a7a3-347416c22216"
+          }
+        ]
+      },
+      "id": "72a47d60-ce76-4a90-ba00-3780fc6b4a2b"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

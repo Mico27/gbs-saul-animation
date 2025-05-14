@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "7c26fcdc-f574-4ee7-831b-fe37fb0fbded",
+  "name": "ScreenAnim_tileset_DMG",
+  "symbol": "tileset_screenanim_tileset_",
+  "width": 16,
+  "height": 16,
+  "imageWidth": 128,
+  "imageHeight": 128,
+  "filename": "ScreenAnim_tileset_DMG.png"
+}

@@ -1,0 +1,21 @@
+{
+  "_resourceType": "variables",
+  "variables": [
+    {
+      "id": "0",
+      "name": "TargetTileIndex1",
+      "symbol": "var_targettileindex1"
+    },
+    {
+      "id": "1",
+      "name": "TargetTileIndex2",
+      "symbol": "var_targettileindex2"
+    },
+    {
+      "id": "2",
+      "name": "SourceTileIndex",
+      "symbol": "var_sourcetileindex"
+    }
+  ],
+  "constants": []
+}
